@@ -16,8 +16,11 @@ baseline: spec
 				package: 'Roassal3-Trachel-Shapes'
 				with: [ spec repository: 'github://ObjectProfile/Roassal3/src' ].
 			spec
+				package: 'Roassal3-Animation'
+				with: [ spec repository: 'github://ObjectProfile/Roassal3/src' ].
+			spec
 				package: 'Roassal3-Clock'
 				with: [ spec
 						requires:
-							#('Roassal3' 'Roassal3-Trachel' 'Roassal3-Scales' 'Roassal3-Trachel-Shapes') ].
+							#('Roassal3' 'Roassal3-Trachel' 'Roassal3-Scales' 'Roassal3-Trachel-Shapes' 'Roassal3-Animation') ].
 			spec group: 'default' with: #('Roassal3-Clock') ]
