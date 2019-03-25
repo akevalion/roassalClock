@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "akevalion 3/25/2019 01:22",
-	"super" : "Object",
+	"super" : "BaselineOf",
 	"category" : "BaselineOfRoassal3Clock",
 	"classinstvars" : [ ],
 	"pools" : [ ],
