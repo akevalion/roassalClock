@@ -1,17 +1,17 @@
 {
-	"commentStamp" : "akevalion 3/24/2019 20:40",
+	"commentStamp" : "akevalion 3/24/2019 22:17",
 	"super" : "Object",
 	"category" : "Roassal3-Clock",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"circle",
-		"arc",
+		"value",
 		"label",
-		"shape",
-		"shapeWithTitle"
+		"maxValue",
+		"minValue",
+		"valueText"
 	],
-	"name" : "Roassal3Clock",
+	"name" : "TimePoint",
 	"type" : "normal"
 }

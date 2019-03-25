@@ -1,0 +1,1 @@
+I set the clock this pharo image
