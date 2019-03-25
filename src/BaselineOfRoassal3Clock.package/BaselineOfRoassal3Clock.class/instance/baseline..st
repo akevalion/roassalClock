@@ -3,15 +3,21 @@ baseline: spec
 	<baseline>
 	spec
 		for: #common
-		do: [ 
+		do: [ spec
+				package: 'Roassal3'
+				with: [ spec repository: 'github://ObjectProfile/Roassal3/src' ].
 			spec
-				project: 'Roassal Core'
-				with: [
-					spec
-						className: 'BaselineOfRoassal3';
-						repository: 'github://ObjectProfile/Roassal3/src';
-						loads: #('Core') ].
+				package: 'Roassal3-Trachel'
+				with: [ spec repository: 'github://ObjectProfile/Roassal3/src' ].
+			spec
+				package: 'Roassal3-Scales'
+				with: [ spec repository: 'github://ObjectProfile/Roassal3/src' ].
+			spec
+				package: 'Roassal3-Trachel-Shapes'
+				with: [ spec repository: 'github://ObjectProfile/Roassal3/src' ].
 			spec
 				package: 'Roassal3-Clock'
-				with: [ spec requires: #('Roassal Core') ].
+				with: [ spec
+						requires:
+							#('Roassal3' 'Roassal3-Trachel' 'Roassal3-Scales' 'Roassal3-Trachel-Shapes') ].
 			spec group: 'default' with: #('Roassal3-Clock') ]
