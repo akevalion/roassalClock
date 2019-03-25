@@ -1,25 +1,23 @@
 build ui
 roassalView
 	<script: 'self new roassalView open setLabel:''Clock'''>
-	| v timePoints elements |
-	v := RSView new.
-	self addImageBackground: v.
+	|  timePoints elements |
+	view := RSView new.
+	self addImageBackground: view.
 	timePoints := self timePoints.
 	elements := shapeWithTitle elementsOn: timePoints.
-	v addAll: elements.
-	v add: v elements asElement.
-	v elements first matrix shx: 0.25.
-	v animation repeat 
+	
+	view add: elements asElement.
+	view animation repeat 
 		duration: 10 seconds;
-		scale: (TSScale linear domain: {0. 0.5. 1}; range: { -0.25. 0.25. -0.25 } );
-		on: v elements first matrix set: #shx:.
-	v animation repeat 
+		easing: TSEasing backOut;
+		scale: (TSScale linear 
+			domain: {0. 0.5. 1}; 
+			range: { 0.35. -0.35. 0.35 } );
+		on: view elements first matrix set: #shx:.
+	view animation repeat 
 		duration: 1 second;
-		onStepDo: [ :t ];
 		when: TSAnimationLoopEvent do: [ 
 			self updateTimePoints: timePoints.
-			elements do: [ :e | e shapes copy do: #remove ].
-			shapeWithTitle updateElements: elements.
 			 ].
-	
-	^ v
+	^ view

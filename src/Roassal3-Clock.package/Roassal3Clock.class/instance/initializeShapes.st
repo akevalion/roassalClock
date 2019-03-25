@@ -32,11 +32,17 @@ initializeShapes
 			(0 @ 100).
 			(150 @ 100)}.
 	shape := RSShapeBuilder composite
-		shapes: [ :m | 
+		shapes: [ :m | | a l |
+			a :=  arc elementOn: m.
+			l := label elementOn: m.
+			view animation repeat; duration: 1 second;
+				when: TSAnimationLoopEvent do: [ 
+					arc updateElement: a.
+					label updateElement: l ].
 			TSGroup new
 				add: (circle elementOn: m);
-				add: (arc elementOn: m);
-				add: (label elementOn: m);
+				add: a ;
+				add: l;
 				yourself ].
 	shapeWithTitle := RSShapeBuilder composite
 		onElement;

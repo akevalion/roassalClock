@@ -1,3 +1,3 @@
 accessing
 valueText
-	^ valueText ifNil: [ self value ]
+	^ valueText ifNil: [ self value asString ]

@@ -10,7 +10,8 @@
 		"arc",
 		"label",
 		"shape",
-		"shapeWithTitle"
+		"shapeWithTitle",
+		"view"
 	],
 	"name" : "Roassal3Clock",
 	"type" : "normal"
