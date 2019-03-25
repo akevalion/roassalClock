@@ -7,7 +7,7 @@ updateTimePoints: points
 	time := current asTime.
 	
 	points first
-		label: 'Months';
+		label: date year asString;
 		value: date monthIndex;
 		valueText: (Month nameOfMonth: date monthIndex);
 		minValue: 0;
