@@ -10,10 +10,9 @@ roassalView
 	view add: elements asElement.
 	view animation repeat 
 		duration: 10 seconds;
-		easing: TSEasing backOut;
 		scale: (TSScale linear 
 			domain: {0. 0.5. 1}; 
-			range: { 0.35. -0.35. 0.35 } );
+			range: { 0.25. -0.25. 0.25 } );
 		on: view elements first matrix set: #shx:.
 	view animation repeat 
 		duration: 1 second;
