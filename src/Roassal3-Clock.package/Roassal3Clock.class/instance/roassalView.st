@@ -8,13 +8,13 @@ roassalView
 	elements := shapeWithTitle elementsOn: timePoints.
 	
 	view add: elements asElement.
-	view animation repeat 
+	view newAnimation repeat 
 		duration: 10 seconds;
 		scale: (TSScale linear 
 			domain: {0. 0.5. 1}; 
 			range: { 0.25. -0.25. 0.25 } );
 		on: view elements first matrix set: #shx:.
-	view animation repeat 
+	view newAnimation repeat 
 		duration: 1 second;
 		when: TSAnimationLoopEvent do: [ 
 			self updateTimePoints: timePoints.

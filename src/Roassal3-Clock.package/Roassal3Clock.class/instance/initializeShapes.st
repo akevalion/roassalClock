@@ -35,7 +35,7 @@ initializeShapes
 		shapes: [ :m | | a l |
 			a :=  arc elementOn: m.
 			l := label elementOn: m.
-			view animation repeat; duration: 1 second;
+			view newAnimation repeat; duration: 1 second;
 				when: TSAnimationLoopEvent do: [ 
 					arc updateElement: a.
 					label updateElement: l ].
