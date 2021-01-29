@@ -1,4 +1,4 @@
-# Roassal Clock
+# Modern Clock
 
 Execute the following incantation in a Playground:
 ```Smalltalk
