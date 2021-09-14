@@ -22,5 +22,5 @@ baseline: spec
 				package: 'Roassal3-Clock'
 				with: [ spec
 						requires:
-							#('Roassal3' 'Roassal3-Trachel' 'Roassal3-Scales' 'Roassal3-Trachel-Shapes' 'Roassal3-Animation') ].
+							#('Roassal3') ].
 			spec group: 'default' with: #('Roassal3-Clock') ]
