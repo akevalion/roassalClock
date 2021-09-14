@@ -3,9 +3,11 @@ baseline: spec
 	<baseline>
 	spec
 		for: #common
-		do: [ spec
-				package: 'Roassal3'
+		do: [ 
+			spec 
+				baseline: 'Roassal3' 
 				with: [ spec repository: 'github://ObjectProfile/Roassal3/src' ].
+
 			spec
 				package: 'Roassal3-Trachel'
 				with: [ spec repository: 'github://ObjectProfile/Roassal3/src' ].
