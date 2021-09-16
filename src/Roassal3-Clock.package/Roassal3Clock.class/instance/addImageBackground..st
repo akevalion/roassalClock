@@ -2,7 +2,7 @@ build ui
 addImageBackground: v
 	| image |
 	image := self pngImage.
-	v addShape: (TSBitmap new form: image).
+	v addShape: (RSBitmap new form: image).
 	v
-		when: TSExtentChangedEvent
+		when: RSExtentChangedEvent
 		do: [ v camera zoomToFit: v extent extent: image extent ]

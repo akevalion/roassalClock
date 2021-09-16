@@ -6,12 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"circle",
-		"arc",
-		"label",
-		"shape",
-		"shapeWithTitle",
-		"view"
+		"canvas",
+		"gradientColors"
 	],
 	"name" : "Roassal3Clock",
 	"type" : "normal"

@@ -1,7 +1,7 @@
 accessing
 imageStream
 	| client file |
-	file := 'rsclock.png' asFileReference.
+	file := './pharo-local/iceberg/akevalion/roassalClock/img/rclock.png' asFileReference.
 	file exists 
 		ifTrue: [ ^ file binaryReadStream ].
 	(client := ZnEasy client)
